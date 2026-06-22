@@ -15,7 +15,7 @@ BitLink lets you create shortened URLs, set custom aliases, add passwords and ex
 - Password-protected and time-expiring links
 - Per-link click statistics
 - Admin panel for user and link management
-- RESTful API
+- RESTful API ([documentation](/api/docs.html))
 - OpenID Connect login
 - Dark and light themes
 

@@ -74,6 +74,10 @@ app.use(asyncHandler(links.redirectCustomDomainHomepage));
 // render html pages
 app.use("/", routes.render);
 
+// serve OpenAPI spec
+const openapi = require("../docs/api/api");
+app.get("/api/v2/openapi.json", (req, res) => res.json(openapi));
+
 // handle api requests
 app.use("/api/v2", routes.api);
 app.use("/api", routes.api);
