@@ -19,6 +19,16 @@
       >
         {{link}}
       </h1>
+      <button
+        type="button"
+        class="shorturl-qr-btn"
+        aria-label="Show QR code"
+        data-url="{{url}}"
+        hx-on:click="handleShortURLQR(this)"
+        title="Generate QR Code"
+      >
+        {{> icons/qrcode}}
+      </button>
     {{/if}}
     {{#unless link}}
         <h1>Short links, <span>smarter</span>.</h1>
@@ -135,4 +145,10 @@
       </div>
     </section>
   </form>
+  <div id="shorturl-qr-panel" class="shorturl-qr-panel hidden">
+    <button class="shorturl-qr-close" type="button" onclick="document.getElementById('shorturl-qr-panel').classList.add('hidden')" aria-label="Close QR">✕</button>
+    <p class="shorturl-qr-label">Scan to visit your link</p>
+    <div id="shorturl-qr-canvas"></div>
+    <a id="shorturl-qr-download" class="button secondary shorturl-qr-download" href="#" download="qrcode.png">Download PNG</a>
+  </div>
 </main>

@@ -101,6 +101,42 @@ function handleQRCode(element, id) {
   });   
 }
 
+// show QR code inline below the shortener form
+function handleShortURLQR(element) {
+  const panel = document.getElementById("shorturl-qr-panel");
+  const canvas = document.getElementById("shorturl-qr-canvas");
+  if (!panel || !canvas) return;
+  const url = element.dataset.url;
+
+  // toggle off if same URL and already visible
+  if (!panel.classList.contains("hidden") && canvas.dataset.lastUrl === url) {
+    panel.classList.add("hidden");
+    return;
+  }
+
+  canvas.textContent = "";
+  canvas.dataset.lastUrl = url;
+  panel.classList.remove("hidden");
+
+  const qr = new QRCode(canvas, {
+    text: url,
+    width: 200,
+    height: 200,
+    colorDark: "#121212",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  // set download link after short delay so QR renders
+  setTimeout(function() {
+    const img = canvas.querySelector("img");
+    const downloadLink = document.getElementById("shorturl-qr-download");
+    if (img && downloadLink) {
+      downloadLink.href = img.src;
+    }
+  }, 300);
+}
+
 // copy the link to clipboard
 function handleCopyLink(element) {
   navigator.clipboard.writeText(element.dataset.url);

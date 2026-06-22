@@ -48,7 +48,7 @@ const spec = {
   REDIS_PORT: num({ default: 6379 }),
   REDIS_PASSWORD: str({ default: "" }),
   REDIS_DB: num({ default: 0 }),
-  DISALLOW_ANONYMOUS_LINKS: bool({ default: true }),
+  ALLOW_ANONYMOUS_LINKS: bool({ default: false }),
   DISALLOW_REGISTRATION: bool({ default: true }),
   DISALLOW_LOGIN_FORM: bool({ default: false }),
   SERVER_IP_ADDRESS: str({ default: "" }),

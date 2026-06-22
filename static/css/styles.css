@@ -69,7 +69,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
-  font: 16px/1.45 'Nunito', sans-serif;
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   color: var(--text-color);
 }
@@ -141,94 +141,108 @@ a.button,
 button {
   position: relative;
   width: auto;
-  height: 40px;
-  display: flex;
+  height: 42px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 32px;
-  font-size: 13px;
-  font-weight: normal;
+  padding: 0 28px;
+  font-size: 14px;
+  font-weight: 500;
   text-align: center;
   line-height: 1;
   word-break: keep-all;
-  color: #444;
-  border: none;
+  color: #121212;
+  border: 1.5px solid transparent;
   border-radius: 100px;
-  transition: all 0.4s ease-out;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   overflow: hidden;
-  background: var(--button-bg);
-  box-shadow: 0 5px 6px var(--button-bg-box-shadow-color);
-}
-
-a.button.primary,
-button.primary {
-  color: white;
-  background: var(--button-bg-primary);
-  box-shadow: 0 5px 6px var(--button-bg-primary-box-shadow-color);
-}
-
-a.button.secondary,
-button.secondary {
-  color: white;
-  background: var(--button-bg-secondary);
-  box-shadow: 0 5px 6px var(--button-bg-secondary-box-shadow-color);
-}
-
-a.button.danger,
-button.danger {
-  color: white;
-  background: var(--button-bg-danger);
-  box-shadow: 0 5px 6px var(--button-bg-danger-box-shadow-color);
-}
-
-a.button.success,
-button.success {
-  color: white;
-  background: var(--button-bg-success);
-  box-shadow: 0 5px 6px var(--button-bg-success-box-shadow-color);
+  background: #e8eaed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 a.button:focus,
 a.button:hover,
 button:focus,
 button:hover {
-  box-shadow: 0 6px 15px var(--button-bg-box-shadow-color);
-  transform: translateY(-2px) scale(1.02, 1.02);
+  background: #d1d5db;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+a.button.primary,
+button.primary {
+  color: #ffffff;
+  background: #121212;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 a.button.primary:focus,
 a.button.primary:hover,
 button.primary:focus,
 button.primary:hover {
-  box-shadow: 0 6px 15px var(--button-bg-primary-box-shadow-color);
+  background: #2c2c2e;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+a.button.secondary,
+button.secondary {
+  color: #121212;
+  background: transparent;
+  border: 1.5px solid #121212;
+  box-shadow: none;
 }
 
 a.button.secondary:focus,
 a.button.secondary:hover,
 button.secondary:focus,
 button.secondary:hover {
-  box-shadow: 0 6px 15px var(--button-bg-secondary-box-shadow-color);
+  background: #121212;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+a.button.danger,
+button.danger {
+  color: #ffffff;
+  background: #d32f2f;
+  box-shadow: 0 2px 4px rgba(211, 47, 47, 0.2);
 }
 
 a.button.danger:focus,
 a.button.danger:hover,
 button.danger:focus,
 button.danger:hover {
-  box-shadow: 0 6px 15px var(--button-bg-danger-box-shadow-color);
+  background: #b71c1c;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+}
+
+a.button.success,
+button.success {
+  color: #ffffff;
+  background: #2e7d32;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.2);
 }
 
 a.button.success:focus,
 a.button.success:hover,
 button.success:focus,
 button.success:hover {
-  box-shadow: 0 6px 15px var(--button-bg-success-box-shadow-color);
+  background: #1b5e20;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
 }
 
 a.button:disabled,
-button:disabled { cursor: default; }
+button:disabled {
+  cursor: default;
+}
 a.button:disabled:hover,
-button:disabled:hover { transform: none; }
+button:disabled:hover {
+  transform: none;
+}
 
 a.button svg.with-text,
 a.button span svg,
@@ -445,25 +459,23 @@ input[type="password"] {
   box-sizing: border-box;
   width: 240px;
   height: 44px;
-  padding: 0 24px;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-  color: #444;
+  padding: 0 16px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #121212;
   background-color: white;
-  border: none;
-  border-radius: 100px;
-  border-bottom: 5px solid #f5f5f5;
-  border-bottom-width: 5px;
-  box-shadow: 0 10px 35px var(--input-shadow-color);
-  transition: all 0.5s ease-out;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
   outline: none;
-  box-shadow: 0 20px 35px var(--input-hover-shadow-color);
+  border-color: #121212;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 input[type="text"]::placeholder,
@@ -485,28 +497,27 @@ select {
   position: relative;
   width: 240px;
   height: 44px;
-  padding: 0 24px;
-  font-size: 15px;
+  padding: 0 16px;
+  font-size: 14px;
   box-sizing: border-box;
-  letter-spacing: 0.05em;
-  color: #444;
+  letter-spacing: 0.01em;
+  color: #121212;
   background-color: white;
-  box-shadow: 0 10px 35px var(--input-shadow-color);
-  border: none;
-  border-radius: 100px;
-  border-bottom: 5px solid #f5f5f5;
-  border-bottom-width: 5px;
-  transition: all 0.5s ease-out;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%235c666b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat, repeat;
-  background-position: right 1.2em top 50%, 0 0;
-  background-size: 1em auto, 100%;
+  background-repeat: no-repeat;
+  background-position: right 1.2em top 50%;
+  background-size: 1em auto;
 }
 
 select:focus {
   outline: none;
-  box-shadow: 0 20px 35px var(--input-hover-shadow-color)
+  border-color: #121212;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .error select {
@@ -1108,6 +1119,109 @@ header a.logo {
 
 header a.logo:hover { border: none; color: inherit; }
 
+/* Logo brand colours */
+header a.logo .logo-bit  { color: #1F68F9; }
+header a.logo .logo-link { color: #FFC31A; }
+
+/* QR button next to the shortened URL */
+.shorturl-qr-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  margin-left: 12px;
+  flex-shrink: 0;
+  background: #f4f6f8;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  box-shadow: none;
+}
+
+.shorturl-qr-btn:hover {
+  background: #121212;
+  border-color: #121212;
+  transform: translateY(-1px);
+}
+
+.shorturl-qr-btn svg {
+  width: 100%;
+  height: 100%;
+  stroke: #555;
+  transition: stroke 0.18s ease;
+}
+
+.shorturl-qr-btn:hover svg { stroke: #fff; }
+
+/* QR panel */
+.shorturl-qr-panel {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1.5px solid #e8eaed;
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  animation: fadein 0.2s ease-in-out;
+}
+
+.shorturl-qr-panel.hidden { display: none; }
+
+.shorturl-qr-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 14px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #888;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.shorturl-qr-close:hover {
+  background: #f4f6f8;
+  color: #121212;
+  transform: none;
+  box-shadow: none;
+}
+
+.shorturl-qr-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+#shorturl-qr-canvas img {
+  border-radius: 8px;
+  display: block;
+}
+
+.shorturl-qr-download {
+  font-size: 13px;
+  height: 36px;
+  padding: 0 20px;
+}
+
 header .logo img {
   margin: 0 12px 0 0;
   padding: 0;
@@ -1266,8 +1380,17 @@ main form input#target {
   width: 100%;
   height: 72px;
   display: flex;
-  padding: 0 84px 0 40px;
+  padding: 0 84px 0 36px;
   font-size: 20px;
+  border-radius: 100px;
+  border: 1.5px solid #d1d5db;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+main form input#target:focus {
+  border-color: #121212;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 main form input#target::placeholder {
@@ -1292,42 +1415,53 @@ main form .target-wrapper {
 }
 
 main form button.submit {
-  box-sizing: content-box;
+  box-sizing: border-box;
   position: absolute;
   cursor: pointer;
-  width: 28px;
-  height: auto;
-  right: 0;
-  top: 16px;
-  padding: 4px;
-  margin: 0 2rem 0;
-  background: none;
-  box-shadow: none;
-  outline: none;
+  width: 48px;
+  height: 48px;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  border-radius: 50%;
   border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+  padding: 0;
+  margin: 0;
 }
 
 main form button.submit:focus,
 main form button.submit:hover {
   outline: none;
+  background-color: #1F68F9;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(31, 104, 249, 0.25);
 }
 
 main form button.submit svg.send {
-  width: 100%;
-  fill: #aaa;
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
   animation: fadein 0.3s ease-in-out;
   transition: fill 0.2s ease-in-out;
 }
 
 main form button.submit:hover svg.send {
-  fill: var(--send-icon-hover-color);
+  fill: #ffffff;
 }
 
 main form button.submit svg.spinner {
   display: none;
   fill: none;
-  stroke: var(--send-spinner-icon-color);
+  stroke: #ffffff;
   stroke-width: 2;
+  width: 18px;
+  height: 18px;
 }
 
 main form.htmx-request button.submit svg.send { display: none; }

@@ -9,7 +9,7 @@ const env = require("../env");
 **/
 
 async function homepage(req, res) {
-  if (env.DISALLOW_ANONYMOUS_LINKS && !req.user) {
+  if (!env.ALLOW_ANONYMOUS_LINKS && !req.user) {
     res.redirect("/login");
     return;
   }

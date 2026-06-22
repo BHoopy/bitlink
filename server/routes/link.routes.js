@@ -36,7 +36,7 @@ router.post(
   cors(),
   locals.viewTemplate("partials/shortener"),
   asyncHandler(auth.apikey),
-  asyncHandler(env.DISALLOW_ANONYMOUS_LINKS ? auth.jwt : auth.jwtLoose),
+  asyncHandler(env.ALLOW_ANONYMOUS_LINKS ? auth.jwtLoose : auth.jwt),
   locals.createLink,
   validators.createLink,
   asyncHandler(helpers.verify),
