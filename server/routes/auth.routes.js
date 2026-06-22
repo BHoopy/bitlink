@@ -24,7 +24,7 @@ router.post(
 router.post(
   "/signup",
   locals.viewTemplate("partials/auth/form"),
-  auth.featureAccess([!env.DISALLOW_REGISTRATION, env.MAIL_ENABLED]),
+  auth.featureAccess([!env.DISALLOW_REGISTRATION]),
   validators.signup,
   asyncHandler(helpers.verify),
   helpers.rateLimit({ window: 60, limit: 5 }),
