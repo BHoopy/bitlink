@@ -1,0 +1,181 @@
+#stats-section {
+  width: 1200px;
+  max-width: 100%;
+  padding: 0 16px;
+}
+
+.loading-stats { 
+  width: 100%;
+  flex: 1 1 0;
+  margin-top: -5rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+.loading-stats .spinner {
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.stats-info {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.stats-info h2 { font-weight: 300; font-size: 24px; }
+.stats-info p { font-size: 14px; }
+.stats-info h2,
+.stats-info p { margin: 0 }
+
+#stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px var(--table-shadow-color);
+  overflow: hidden;
+  padding: 0;
+}
+
+.stats-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--table-bg-color);
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+.total-number { font-weight: bold; }
+
+.stats-nav { display: flex; align-items: center; }
+
+.stats-nav button { margin-right: 0.75rem; }
+.stats-nav button:last-child { margin-right: 0; }
+
+.stats-period {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0.75rem 1.5rem;
+}
+
+.stats-period h2 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 1rem 0 0;
+}
+
+.stats-period span.total-in-period {
+  font-weight: bold;
+  border-bottom: 1px dotted var(--underline-color);
+}
+
+p.last-update {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  margin: 0.75rem 0 0;
+}
+
+#stats canvas {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.stats-columns-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.stats-columns-wrapper > div {
+  flex: 1 1 50%;
+}
+
+svg.map { width: 100%; }
+
+svg.map path {
+  fill: hsl(200, 15%, 92%);
+  stroke: #fff;
+  transition: all 0.1s ease-in-out;
+}
+
+svg.map path.color-1 { fill: #e8f0ff; }
+svg.map path.color-2 { fill: #d4e4ff; }
+svg.map path.color-3 { fill: #b8d4ff; }
+svg.map path.color-4 { fill: #9bc2ff; }
+svg.map path.color-5 { fill: #80AAFF; }
+svg.map path.color-6 { fill: #5a8ff5; }
+svg.map path.active { stroke: #1F68F9; stroke-width: 1.5; }
+
+#map-tooltip {
+  position: fixed;
+}
+
+#map-tooltip.visible::before,
+#map-tooltip.visible::after {
+  display: block !important;
+}
+
+#map-tooltip:before {
+  border-top-color: rgba(255, 255, 255, 0.95);
+}
+
+#map-tooltip:after {
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+}
+
+.stats-back-to-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.stats-error {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.stats-error p { margin-top: -3rem; display: flex; align-items: center; }
+.stats-error p svg { width: 1.2rem; margin: 0 0.5rem 0.1rem 0; }
+.stats-error .stats-back-to-home { margin-top: 0 }
+
+#notfound {
+  width: 800px;
+  align-items: center;
+}
+
+#notfound h2 { 
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+
+#banned { width: 1200px; align-items: center; text-align: center }
+#banned h2 { font-weight: normal; }
+#banned h4 { font-weight: normal; margin: 0; }
+
+#url-info {
+  width: 1200px;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+}
+
+#url-info h3 { font-weight: normal; margin: 0; }
+#url-info p { line-break: anywhere; }
+
+#error-page { align-items: center; text-align: center; }
+#error-page h2 { margin: 0; }
+#error-page .back-to-home { margin-top: 2rem; }

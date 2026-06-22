@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200 1000;
+  src: url(/fonts/nunito-variable.woff2) format('woff2');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+  outline-color: var(--outline-color);
+}
+
+*::-moz-focus-inner {
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  outline: none;
+  border: none;
+  background-color: hsl(200, 20%, 92%);
+}
+
+span.bold { font-weight: bold; }
+span.underline { border-bottom: 2px dotted #999; }
+
+.space-between { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+a,
+button.link {
+  color: var(--color-primary);
+  border-bottom: 1px dotted transparent;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+a:hover,
+button.link:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+a.wrapper-only {
+  color: inherit;
+}
+
+a.nav {
+  color: inherit;
+  padding-bottom: 2px;
+}
+
+a.nav:hover {
+  color: var(--color-primary);
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-container {
+  max-width: 90%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.htmx-spinner .spinner { display: none; }
+.htmx-spinner.htmx-request button svg { display: none; }
+.htmx-spinner.htmx-request .spinner { display: block; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadein {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slidey {
+  from { transform: translateY(var(--keyframe-slidey-offset)) }
+  to { transform: translateY(0) }
+}
+
+@keyframes tooltip {
+  to { opacity: 0.9; transform: translate(-50%, 0); }
+}

@@ -1,0 +1,327 @@
+@media only screen and (max-width: 900px) {
+  #main-table-wrapper table thead,
+  #main-table-wrapper table tbody,
+  #main-table-wrapper table tfoot { min-width: 700px; }
+}
+
+@media only screen and (max-width: 768px) {
+  html, body { font-size: 14px; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select  {
+    font-size: 16px;
+    padding: 0 14px;
+    height: 44px;
+    letter-spacing: 0.02em;
+    border-bottom-width: 3px;
+  }
+
+  label input { margin-top: 6px; }
+
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder { font-size: 15px; letter-spacing: 0.02em; }
+
+  table { border-radius: 8px; }
+  table tr { padding: 0 6px; }
+  table th,
+  table td { padding: 8px; }
+  table td { font-size: 13px; }
+  table tr.loading-placeholder td { font-size: 14px; }
+
+  a.button,
+  button { height: 36px; padding: 0 18px; font-size: 13px; }
+  a.button.action,
+  button.action { padding: 5px; width: 24px; height: 24px; }
+  button.nav { height: 28px; padding: 0 8px; font-size: 11px; }
+
+  .dialog .box { min-width: 280px; padding: 24px 16px; }
+  .dialog.qrcode .box { padding: 16px; }
+  .dialog .loading { width: 20px; height: 20px; margin: 20px 0; }
+  .dialog .content .buttons { margin-top: 16px; gap: 8px; }
+
+  header {
+    padding: 0 12px;
+    height: 48px;
+  }
+  header a.logo { font-size: 16px; }
+  header ul.logo-links { display: none; }
+  header .logo img { width: 20px; height: 20px; margin-right: 6px; }
+  header nav ul { gap: 6px; }
+  header nav ul li { margin: 0; }
+  header nav ul li a.button {
+    height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+  header nav ul li a.nav { font-size: 12px; }
+
+  section#settings,
+  .section-container {
+    padding: 0 12px;
+    margin-top: 64px;
+  }
+
+  form#login-signup {
+    width: 100%;
+    padding: 0 12px;
+    margin-top: 24px;
+  }
+  form#login-signup label { margin-bottom: 16px; }
+  form#login-signup input {
+    height: 50px;
+    margin-top: 6px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+  form#login-signup .buttons-wrapper {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  form#login-signup .buttons-wrapper button,
+  form#login-signup .buttons-wrapper a.button {
+    height: 44px;
+    width: 100%;
+  }
+  form#login-signup a.forgot-password { font-size: 13px; }
+  .login-signup-message { margin-top: 16px; }
+  .login-signup-message h1 { font-size: 18px; }
+
+  .admin-form-title { font-size: 22px; }
+
+  main {
+    margin-top: 64px;
+    padding: 0 12px;
+  }
+  main #shorturl {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 24px;
+  }
+  main #shorturl h1 {
+    font-size: 1.3rem;
+    word-break: break-all;
+  }
+  .clipboard { width: 32px; height: 32px; margin-right: 0; }
+  .clipboard.small { width: 26px; height: 26px; }
+  .clipboard svg.check { padding: 3px; }
+  main form input#target {
+    height: 50px;
+    padding: 0 50px 0 16px;
+    font-size: 16px;
+  }
+  main form input#target::placeholder { font-size: 15px; }
+  main form p.error { font-size: 12px; margin-left: 0; }
+  main form .target-wrapper p.error { font-size: 13px; margin-left: 0; }
+  main form button.submit {
+    width: 36px;
+    height: 36px;
+    top: 7px;
+    right: 6px;
+    margin: 0;
+    padding: 8px;
+  }
+  main form label#advanced { margin-top: 16px; }
+  main form label#advanced input { margin-bottom: 2px; }
+
+  #advanced-options { margin-top: 12px; }
+  .advanced-input-wrapper {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .advanced-input-wrapper label { width: 100%; padding-right: 0; }
+  .advanced-input-wrapper label.expire-in { flex: 1 1 auto; }
+  .advanced-input-wrapper label.description { flex: 1 1 auto; }
+  .advanced-input-wrapper label input,
+  .advanced-input-wrapper label select { margin-top: 6px; }
+
+  #main-table-wrapper {
+    margin: 48px 0 40px;
+    padding: 0 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #main-table-wrapper h2 { font-size: 18px; margin-bottom: 8px; }
+  #main-table-wrapper table thead,
+  #main-table-wrapper table tbody,
+  #main-table-wrapper table tfoot { min-width: 600px; }
+  #main-table-wrapper tr { padding: 0 4px; }
+  #main-table-wrapper th,
+  #main-table-wrapper td { padding: 8px 6px; }
+  #main-table-wrapper td { font-size: 13px; }
+  #main-table-wrapper table .actions a.button,
+  #main-table-wrapper table .actions button {
+    margin-right: 4px;
+    padding: 4px;
+    width: 22px;
+    height: 22px;
+  }
+  #main-table-wrapper table td p.description { font-size: 11px; }
+  #main-table-wrapper table tr.no-data td { font-size: 14px; }
+  #main-table-wrapper.admin-table-wrapper table th.nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #main-table-wrapper.admin-table-wrapper table th .nav-divider { display: none; }
+  #main-table-wrapper.admin-table-wrapper table th .limit { margin-bottom: 8px; }
+  table .tab a { padding: 5px 10px; font-size: 11px; margin: 0 2px; }
+  #main-table-wrapper th.category-total p { font-size: 12px; }
+  #main-table-wrapper table thead tr.controls.with-filters { align-items: flex-start; }
+  #main-table-wrapper table th select,
+  input.table-input { height: 30px; font-size: 12px; padding: 0 10px; }
+  #main-table-wrapper table th select { background-position: right 6px top 50%; background-size: 12px; }
+  .search-input-wrapper button { padding: 2px; margin-right: 0; }
+  #main-table-wrapper table th input.search.admin { max-width: 120px; padding: 0 10px; }
+  #main-table-wrapper table th select.table-input { max-width: 100px; }
+  #main-table-wrapper table th button.table { height: 30px; font-size: 11px; }
+  #main-table-wrapper table th input::placeholder { font-size: 11px; }
+  #main-table-wrapper table tr.controls .checkbox { font-size: 12px; margin-left: 6px; }
+  #main-table-wrapper table button.nav { margin-right: 4px; }
+  #main-table-wrapper table .nav-divider { height: 16px; margin: 0 8px; }
+  #main-table-wrapper table tbody td.right-fade:after { width: 12px; }
+  #main-table-wrapper table tr.edit td { padding: 12px 8px; }
+  #main-table-wrapper table tr.edit label {
+    margin: 0 0 8px;
+    width: 100%;
+  }
+  #main-table-wrapper table tr.edit input {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 13px;
+    width: 100%;
+  }
+  #main-table-wrapper table tr.edit input,
+  #main-table-wrapper table tr.edit input + p { width: 100%; }
+  #main-table-wrapper table tr.edit input[name="target"],
+  #main-table-wrapper table tr.edit input[name="description"],
+  #main-table-wrapper table tr.edit input[name="target"] + p,
+  #main-table-wrapper table tr.edit input[name="description"] + p { width: 100%; }
+  #main-table-wrapper table tr.edit button {
+    height: 34px;
+    margin-right: 6px;
+    font-size: 12px;
+  }
+  #main-table-wrapper table tr.edit td.loading svg { width: 14px; height: 14px; }
+  #main-table-wrapper table tr.edit form .response p { margin: 12px 0 0; }
+  #main-table-wrapper table tr.edit td form > div {
+    flex-direction: column;
+  }
+  #main-table-wrapper table tr.edit td form button { margin-top: 8px; }
+  .dialog .ban-checklist { flex-direction: column; align-items: flex-start; }
+  .dialog .ban-checklist label { margin: 4px 0; }
+
+  footer { padding: 12px 0; font-size: 12px; }
+  footer p { flex-wrap: wrap; justify-content: center; gap: 6px; }
+  footer button.link { font-size: 12px; }
+
+  h1.settings-welcome { font-size: 18px; }
+  .add-domain-wrapper { margin: 12px 0 12px; }
+  .add-domain-wrapper > .spinner { width: 18px; margin: 8px 0 0 8px; }
+  form#add-domain { margin-top: 8px; }
+  form#add-domain .buttons-wrapper { flex-direction: column; gap: 8px; }
+  form#add-domain button { margin: 0; }
+  form#add-domain .spinner { width: 18px; }
+
+  #settings { padding: 0 12px; }
+  #settings label input,
+  #settings label select { width: 100%; }
+
+  #apikey-wrapper { max-width: 100%; }
+  #apikey {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  #apikey p { font-size: 13px; word-break: break-all; }
+  #apikey .clipboard { margin: 0; }
+
+  #change-password-wrapper label input,
+  #change-email-wrapper label input { width: 100%; }
+
+  .stats-info { flex-direction: column; align-items: flex-start; }
+  .stats-info h2 { font-size: 18px; margin-bottom: 4px; }
+  .stats-info p { font-size: 12px; }
+  .stats-head { padding: 8px 12px; flex-wrap: wrap; gap: 8px; }
+  .stats-head p { font-size: 13px; }
+  .stats-nav { gap: 4px; }
+  .stats-nav button { margin: 0; padding: 0 10px; height: 30px; }
+  .stats-period { padding: 8px 12px; }
+  .stats-period h2 { font-size: 16px; margin: 8px 0 0; }
+  p.last-update { font-size: 11px; }
+  #stats canvas { margin: 12px 0; }
+  .stats-columns-wrapper { flex-direction: column; }
+  .stats-columns-wrapper > div { flex-basis: 100%; }
+  .loading-stats { margin-top: -48px; }
+  .loading-stats .spinner { width: 18px; }
+
+  #stats-section {
+    padding: 0 12px;
+  }
+
+  #notfound { width: 100%; padding: 0 16px; }
+  #notfound h2 { font-size: 18px; }
+
+  #report { width: 100%; padding: 0 12px; }
+  #report form { margin-top: 16px; }
+  #report form .inputs-wrapper { flex-direction: column; align-items: stretch; }
+  #report form label input { width: 100%; }
+  #report form button { margin: 8px 0 0; width: 100%; }
+
+  #reset-password { width: 100%; padding: 0 12px; }
+  #reset-password form .inputs-wrapper { flex-direction: column; align-items: stretch; margin-top: 16px; }
+  #reset-password form label { flex-basis: auto; width: 100%; }
+  #reset-password form button { margin: 8px 0 0; }
+
+  #new-password form { width: 100%; padding: 0 12px; }
+  #new-password form label { margin-bottom: 16px; }
+  #new-password form input {
+    height: 50px;
+    margin-top: 6px;
+    padding: 0 16px;
+    font-size: 16px;
+  }
+  #new-password form button { height: 44px; width: 100%; }
+
+  .verify-page { width: 100%; padding: 0 16px; }
+  .verify-page h2,
+  .verify-page h3 { flex-direction: column; text-align: center; font-size: 16px; }
+
+  #url-info { width: 100%; padding: 0 12px; }
+
+  #protected { width: 100%; padding: 0 12px; }
+  #protected form { margin-top: 8px; }
+  #protected form .inputs-wrapper { flex-direction: column; align-items: stretch; }
+  #protected form label { flex-basis: auto; width: 100%; }
+  #protected form label input { width: 100%; }
+  #protected form button { margin: 8px 0 0; }
+
+  #terms { width: 100%; padding: 0 16px; }
+
+  #error-page h2 { font-size: 18px; }
+  #error-page .back-to-home { margin-top: 16px; }
+
+  #banned { width: 100%; padding: 0 16px; }
+}
+
+@media only screen and (max-width: 480px) {
+  header nav ul li a.button {
+    padding: 0 8px;
+    font-size: 10px;
+  }
+
+  main #shorturl h1 { font-size: 1.1rem; }
+
+  #main-table-wrapper { margin: 40px 0 32px; }
+  #main-table-wrapper table thead,
+  #main-table-wrapper table tbody,
+  #main-table-wrapper table tfoot { min-width: 500px; }
+  #main-table-wrapper th,
+  #main-table-wrapper td { padding: 6px 4px; }
+  #main-table-wrapper td { font-size: 12px; }
+
+  .dialog .box { min-width: 260px; }
+}
