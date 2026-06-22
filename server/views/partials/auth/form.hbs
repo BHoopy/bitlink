@@ -26,31 +26,29 @@
     <div class="buttons-wrapper">
       <button 
         type="submit" 
-        class="primary login {{#if disallow_registration}}full{{else}}{{#unless mail_enabled}}full{{/unless}}{{/if}}"
+        class="primary login {{#if disallow_registration}}full{{/if}}"
       >
         <span>{{> icons/login}}</span>
         <span>{{> icons/spinner}}</span>
         Log in
       </button>
       {{#unless disallow_registration}}
-        {{#if mail_enabled}}
-          <button 
-            type="button"
-            class="secondary signup" 
-            hx-post="/api/auth/signup" 
-            hx-target="#login-signup" 
-            hx-trigger="click" 
-            hx-indicator="#login-signup" 
-            hx-swap="outerHTML"
-            hx-sync="closest form"
-            hx-on:htmx:before-request="htmx.addClass('#login-signup', 'signup')"
-            hx-on:htmx:after-request="htmx.removeClass('#login-signup', 'signup')"
-          >
-              <span>{{> icons/new_user}}</span>
-              <span>{{> icons/spinner}}</span>
-              Sign up
-          </button>
-        {{/if}}
+        <button 
+          type="button"
+          class="secondary signup" 
+          hx-post="/api/auth/signup" 
+          hx-target="#login-signup" 
+          hx-trigger="click" 
+          hx-indicator="#login-signup" 
+          hx-swap="outerHTML"
+          hx-sync="closest form"
+          hx-on:htmx:before-request="htmx.addClass('#login-signup', 'signup')"
+          hx-on:htmx:after-request="htmx.removeClass('#login-signup', 'signup')"
+        >
+            <span>{{> icons/new_user}}</span>
+            <span>{{> icons/spinner}}</span>
+            Sign up
+        </button>
       {{/unless}}
     </div>
   {{/unless}}

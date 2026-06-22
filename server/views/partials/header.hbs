@@ -16,6 +16,12 @@
   </div>
   <nav>
     <ul>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+          {{> icons/sun}}
+          {{> icons/moon}}
+        </button>
+      </li>
       {{#unless user}}
         {{#unless login_disabled}}
           <li>

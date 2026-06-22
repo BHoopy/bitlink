@@ -99,18 +99,27 @@ async function signup(req, res) {
   const password = await bcrypt.hash(req.body.password, salt);
   
   const user = await query.user.add(
-    { email: req.body.email, password },
+    { email: req.body.email, password, verified: !env.MAIL_ENABLED },
     req.user
   );
-  
-  await mail.verification(user);
+
+  if (env.MAIL_ENABLED) {
+    await mail.verification(user);
+
+    if (req.isHTML) {
+      res.render("partials/auth/verify");
+      return;
+    }
+
+    return res.status(201).send({ message: "A verification email has been sent." });
+  }
 
   if (req.isHTML) {
-    res.render("partials/auth/verify");
+    res.render("partials/auth/welcome");
     return;
   }
-  
-  return res.status(201).send({ message: "A verification email has been sent." });
+
+  return res.status(201).send({ message: "Account created successfully." });
 }
 
 async function createAdminUser(req, res) {

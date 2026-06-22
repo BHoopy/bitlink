@@ -1,6 +1,24 @@
 // log htmx on dev
 // htmx.logAll();
 
+// dark/light theme toggle
+(function() {
+  const stored = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (stored === "dark" || (!stored && prefersDark)) {
+    document.documentElement.dataset.theme = "dark";
+  } else if (stored === "light") {
+    document.documentElement.dataset.theme = "light";
+  }
+})();
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.dataset.theme === "dark";
+  html.dataset.theme = isDark ? "light" : "dark";
+  localStorage.setItem("theme", isDark ? "light" : "dark");
+}
+
 // add text/html accept header to receive html instead of json for the requests
 document.body.addEventListener("htmx:configRequest", function(evt) {
   evt.detail.headers["Accept"] = "text/html,*/*";
