@@ -1,7 +1,7 @@
 {
-  "name": "kutt",
+  "name": "bitlink",
   "version": "3.2.5",
-  "description": "Modern URL shortener.",
+  "description": "BitLink — modern URL shortener.",
   "main": "./server/server.js",
   "scripts": {
     "dev": "node --watch-path=./server --watch-path=./custom server/server.js",

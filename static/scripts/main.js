@@ -95,7 +95,7 @@ function handleQRCode(element, id) {
     text: element.dataset.url,
     width: 200,
     height: 200,
-    colorDark : "#000000",
+    colorDark : "#2F3437",
     colorLight : "#ffffff",
     correctLevel : QRCode.CorrectLevel.H
   });   

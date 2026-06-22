@@ -6,41 +6,41 @@
 }
 
 :root {
-  --bg-color: hsl(206, 12%, 95%);
-  --text-color: hsl(200, 35%, 25%);
-  --color-primary: hsl(207, 90%, 54%);
-  --outline-color: hsl(188, 100%, 54%);
-  --button-bg: linear-gradient(to right, #e0e0e0, #bdbdbd);
-  --button-bg-box-shadow-color: rgba(160, 160, 160, 0.5);
-  --button-bg-primary: linear-gradient(to right, hsl(207, 90%, 61%), hsl(218, 100%, 58%));
-  --button-bg-primary-box-shadow-color: hsla(207, 90%, 61%, 0.5);
-  --button-bg-secondary: linear-gradient(to right, hsl(262, 47%, 55%), hsl(265, 100%, 46%));
-  --button-bg-secondary-box-shadow-color: hsla(258, 58%, 42%, 0.5);
+  --bg-color: #f4f6f8;
+  --text-color: #2F3437;
+  --color-primary: #1F68F9;
+  --outline-color: #80AAFF;
+  --button-bg: linear-gradient(to right, #e8eaed, #d1d5db);
+  --button-bg-box-shadow-color: rgba(47, 52, 55, 0.15);
+  --button-bg-primary: linear-gradient(to right, #1F68F9, #80AAFF);
+  --button-bg-primary-box-shadow-color: rgba(31, 104, 249, 0.45);
+  --button-bg-secondary: linear-gradient(to right, #FFC31A, #e6ad00);
+  --button-bg-secondary-box-shadow-color: rgba(255, 195, 26, 0.45);
   --button-bg-danger: linear-gradient(to right, hsl(0, 84%, 58%), hsl(0, 78%, 50%));
   --button-bg-danger-box-shadow-color: hsla(0, 58%, 42%, 0.5);
   --button-bg-success: linear-gradient(to right, hsl(130, 58%, 45%), hsl(130, 67%, 45%));
   --button-bg-success-box-shadow-color: hsla(128, 80%, 48%, 0.5);
-  --button-action-shadow-color: hsla(200, 15%, 60%, 0.12);
-  --underline-color: hsl(200, 35%, 65%);
-  --secondary-text-color: hsl(200, 14%, 60%);
-  --send-icon-hover-color: hsl(262, 52%, 47%);
-  --send-spinner-icon-color: hsl(200, 15%, 70%);
+  --button-action-shadow-color: rgba(47, 52, 55, 0.1);
+  --underline-color: #80AAFF;
+  --secondary-text-color: #5a6166;
+  --send-icon-hover-color: #FFC31A;
+  --send-spinner-icon-color: #9aa3a8;
   --success-icon-color: hsl(144, 40%, 57%);
   --error-icon-color: hsl(0, 86%, 63%);
   --copy-icon-color: hsl(144, 40%, 57%);
   --copy-icon-bg-color: hsl(144, 100%, 96%);
-  --copy-icon-shadow-color: hsla(200, 15%, 60%, 0.12);
-  --focus-outline-color: hsla(207, 90%, 61%, 0.5);
-  --checkbox-bg-color: hsl(262, 47%, 63%);
-  --input-shadow-color: hsla(200, 15%, 70%, 0.2);
-  --input-hover-shadow-color: hsla(200, 15%, 70%, 0.4);
-  --input-label-color: hsl(200, 35%, 25%);
-  --table-bg-color: hsl(200, 12%, 95%);
-  --table-shadow-color: hsla(200, 20%, 70%, 0.3);
-  --table-tr-border-color: hsl(200, 14%, 94%);
-  --table-tr-hover-bg-color: hsl(200, 14%, 98%);
-  --table-head-tr-border-color: hsl(200, 14%, 90%);
-  --table-status-gray-bg-color: hsl(200, 12%, 95%);
+  --copy-icon-shadow-color: rgba(47, 52, 55, 0.1);
+  --focus-outline-color: rgba(128, 170, 255, 0.5);
+  --checkbox-bg-color: #1F68F9;
+  --input-shadow-color: rgba(47, 52, 55, 0.12);
+  --input-hover-shadow-color: rgba(47, 52, 55, 0.2);
+  --input-label-color: #2F3437;
+  --table-bg-color: #f4f6f8;
+  --table-shadow-color: rgba(47, 52, 55, 0.12);
+  --table-tr-border-color: #e8eaed;
+  --table-tr-hover-bg-color: #fafbfc;
+  --table-head-tr-border-color: #dfe3e6;
+  --table-status-gray-bg-color: #f4f6f8;
   --keyframe-slidey-offset: 0;
 }
 
@@ -296,13 +296,13 @@ button.action.qrcode svg {
 
 a.button.action.stats,
 button.action.stats {
-  background: hsl(260, 100%, 96%);
+  background: rgba(128, 170, 255, 0.15);
 }
 
 a.button.action.stats svg,
 button.action.stats svg {
   stroke-width: 2.5;
-  stroke: hsl(260, 100%, 69%);
+  stroke: #1F68F9;
 }
 
 a.button.action.ban,
@@ -1250,7 +1250,8 @@ main #shorturl h1.link:hover {
 .clipboard.copied svg.check { display: block; }
 
 main #shorturl h1 span {
-  border-bottom: 1px dotted #999;
+  color: #FFC31A;
+  border-bottom: 1px dotted #FFC31A;
 }
 
 main form {
@@ -1940,13 +1941,13 @@ svg.map path {
   transition: all 0.1s ease-in-out;
 }
 
-svg.map path.color-1 { fill: hsl(261, 46%, 90%); }
-svg.map path.color-2 { fill: hsl(261, 46%, 86%); }
-svg.map path.color-3 { fill: hsl(261, 46%, 82%); }
-svg.map path.color-4 { fill: hsl(261, 46%, 76%); }
-svg.map path.color-5 { fill: hsl(261, 46%, 72%); }
-svg.map path.color-6 { fill: hsl(261, 46%, 68%); }
-svg.map path.active { stroke: hsl(261, 46%, 50%); stroke-width: 1.5; }
+svg.map path.color-1 { fill: #e8f0ff; }
+svg.map path.color-2 { fill: #d4e4ff; }
+svg.map path.color-3 { fill: #b8d4ff; }
+svg.map path.color-4 { fill: #9bc2ff; }
+svg.map path.color-5 { fill: #80AAFF; }
+svg.map path.color-6 { fill: #5a8ff5; }
+svg.map path.active { stroke: #1F68F9; stroke-width: 1.5; }
 
 #map-tooltip {
   position: fixed;

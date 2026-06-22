@@ -84,8 +84,8 @@ function createViewsChart() {
     const maxTicksLimitX = period === "year" ? 6 : period === "month" ? 15 : 12;
   
     const gradient = ctx.getContext("2d").createLinearGradient(0, 0, 0, 300);
-    gradient.addColorStop(0, "rgba(179, 157, 219, 0.95)");   
-    gradient.addColorStop(1, "rgba(179, 157, 219, 0.05)");
+    gradient.addColorStop(0, "rgba(128, 170, 255, 0.95)");
+    gradient.addColorStop(1, "rgba(128, 170, 255, 0.05)");
     
     new Chart(ctx, {
       type: "line",
@@ -106,7 +106,7 @@ function createViewsChart() {
             target: "start",
           },
           backgroundColor: gradient,
-          borderColor: "rgb(179, 157, 219)",
+          borderColor: "rgb(128, 170, 255)",
           borderWidth: 1,
         }]
       },
@@ -117,10 +117,10 @@ function createViewsChart() {
           },
           tooltip: {
             backgroundColor: "rgba(255, 255, 255, 0.95)",
-            titleColor: "#333",
+            titleColor: "#2F3437",
             titleFont: { weight: "normal", size: 15 },
             bodyFont: { weight: "normal", size: 16 },
-            bodyColor: "rgb(179, 157, 219)",
+            bodyColor: "rgb(128, 170, 255)",
             padding: 12,
             cornerRadius: 2,
             borderColor: "rgba(0, 0, 0, 0.1)",
@@ -167,10 +167,10 @@ function createBrowsersChart() {
 
     const gradient = ctx.getContext("2d").createLinearGradient(500, 0, 0, 0);
     const gradientHover = ctx.getContext("2d").createLinearGradient(500, 0, 0, 0);
-    gradient.addColorStop(0, "rgba(179, 157, 219, 0.95)");   
-    gradient.addColorStop(1, "rgba(179, 157, 219, 0.05)");
-    gradientHover.addColorStop(0, "rgba(179, 157, 219, 0.9)");   
-    gradientHover.addColorStop(1, "rgba(179, 157, 219, 0.4)");
+    gradient.addColorStop(0, "rgba(128, 170, 255, 0.95)");
+    gradient.addColorStop(1, "rgba(128, 170, 255, 0.05)");
+    gradientHover.addColorStop(0, "rgba(128, 170, 255, 0.9)");
+    gradientHover.addColorStop(1, "rgba(128, 170, 255, 0.4)");
 
     new Chart(ctx, {
       type: "bar",
@@ -180,7 +180,7 @@ function createBrowsersChart() {
           label: "Views",
           data: data.map(d => d.value),
           backgroundColor: gradient,
-          borderColor: "rgba(179, 157, 219, 1)",
+          borderColor: "rgba(128, 170, 255, 1)",
           borderWidth: 1,
           hoverBackgroundColor: gradientHover,
           hoverBorderWidth: 2
@@ -194,10 +194,10 @@ function createBrowsersChart() {
           },
           tooltip: {
             backgroundColor: "rgba(255, 255, 255, 0.95)",
-            titleColor: "#333",
+            titleColor: "#2F3437",
             titleFont: { weight: "normal", size: 15 },
             bodyFont: { weight: "normal", size: 16 },
-            bodyColor: "rgb(179, 157, 219)",
+            bodyColor: "rgb(128, 170, 255)",
             padding: 12,
             cornerRadius: 2,
             borderColor: "rgba(0, 0, 0, 0.1)",
@@ -239,16 +239,16 @@ function createReferrersChart() {
     let max = Array.from(data).sort((a, b) => a.value > b.value ? -1 : 1)[0];
 
     let tooltipEnabled = true;
-    let hoverBackgroundColor = "rgba(179, 157, 219, 1)";
+    let hoverBackgroundColor = "rgba(128, 170, 255, 1)";
     let hoverBorderWidth = 2;
-    let borderColor = "rgba(179, 157, 219, 1)";
+    let borderColor = "rgba(128, 170, 255, 1)";
     if (data.length === 0) {
       data.push({ name: "No views.", value: 1 });
       max = { value: 1000 };
       tooltipEnabled = false;
-      hoverBackgroundColor = "rgba(179, 157, 219, 0.1)";
+      hoverBackgroundColor = "rgba(128, 170, 255, 0.1)";
       hoverBorderWidth = 1;
-      borderColor = "rgba(179, 157, 219, 0.2)";
+      borderColor = "rgba(128, 170, 255, 0.2)";
     }
 
     new Chart(ctx, {
@@ -258,7 +258,7 @@ function createReferrersChart() {
         datasets: [{
           label: "Views",
           data: data.map(d => d.value),
-          backgroundColor: data.map(d => `rgba(179, 157, 219, ${Math.max((d.value / max.value) - 0.2, 0.1).toFixed(2)})`),
+          backgroundColor: data.map(d => `rgba(128, 170, 255, ${Math.max((d.value / max.value) - 0.2, 0.1).toFixed(2)})`),
           borderWidth: 1,
           borderColor,
           hoverBackgroundColor,
@@ -277,10 +277,10 @@ function createReferrersChart() {
           tooltip: {
             enabled: tooltipEnabled,
             backgroundColor: "rgba(255, 255, 255, 0.95)",
-            titleColor: "#333",
+            titleColor: "#2F3437",
             titleFont: { weight: "normal", size: 15 },
             bodyFont: { weight: "normal", size: 16 },
-            bodyColor: "rgb(179, 157, 219)",
+            bodyColor: "rgb(128, 170, 255)",
             padding: 12,
             cornerRadius: 2,
             borderColor: "rgba(0, 0, 0, 0.1)",
@@ -321,10 +321,10 @@ function createOsChart() {
 
     const gradient = ctx.getContext("2d").createLinearGradient(500, 0, 0, 0);
     const gradientHover = ctx.getContext("2d").createLinearGradient(500, 0, 0, 0);
-    gradient.addColorStop(0, "rgba(179, 157, 219, 0.95)");   
-    gradient.addColorStop(1, "rgba(179, 157, 219, 0.05)");
-    gradientHover.addColorStop(0, "rgba(179, 157, 219, 0.9)");   
-    gradientHover.addColorStop(1, "rgba(179, 157, 219, 0.4)");
+    gradient.addColorStop(0, "rgba(128, 170, 255, 0.95)");
+    gradient.addColorStop(1, "rgba(128, 170, 255, 0.05)");
+    gradientHover.addColorStop(0, "rgba(128, 170, 255, 0.9)");
+    gradientHover.addColorStop(1, "rgba(128, 170, 255, 0.4)");
 
     new Chart(ctx, {
       type: "bar",
@@ -334,7 +334,7 @@ function createOsChart() {
           label: "Views",
           data: data.map(d => d.value),
           backgroundColor: gradient,
-          borderColor: "rgba(179, 157, 219, 1)",
+          borderColor: "rgba(128, 170, 255, 1)",
           borderWidth: 1,
           hoverBackgroundColor: gradientHover,
           hoverBorderWidth: 2
@@ -348,10 +348,10 @@ function createOsChart() {
           },
           tooltip: {
             backgroundColor: "rgba(255, 255, 255, 0.95)",
-            titleColor: "#333",
+            titleColor: "#2F3437",
             titleFont: { weight: "normal", size: 15 },
             bodyFont: { weight: "normal", size: 16 },
-            bodyColor: "rgb(179, 157, 219)",
+            bodyColor: "rgb(128, 170, 255)",
             padding: 12,
             cornerRadius: 2,
             borderColor: "rgba(0, 0, 0, 0.1)",

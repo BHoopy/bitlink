@@ -4,13 +4,13 @@ const p = require("../../package.json");
 module.exports = {
   openapi: "3.0.0",
   info: {
-    title: "Kutt.to",
-    description: "API reference for [http://kutt.to](http://kutt.to).\n",
+    title: "BitLink",
+    description: "API reference for BitLink URL shortener.\n",
     version: p.version
   },
   servers: [
     {
-      url: "https://kutt.to/api/v2"
+      url: "https://localhost:3000/api/v2"
     }
   ],
   tags: [
